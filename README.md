@@ -32,8 +32,23 @@ This project was developed using *HTML, CSS, and vanilla JavaScript* without ext
 ---
 
 ## 📂 Project Structure 
----
-
+```
+├── chat.html
+├── chat.css
+├── chat.js
+├── recommendations.html
+├── recommendations.js
+├── recommendations.css
+├── smart.html
+├── smart.css
+├── smart.js
+├── trust.html
+├── trust.css
+├── trust.js
+├── index.html
+├── styles.css
+├── script.js
+```
 ## 🛠️ Tech Stack  
 
 - **HTML5** for structure  
