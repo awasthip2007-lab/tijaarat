@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Filters • Vyaapar</title>
+  <link rel="stylesheet" href="smart.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="smart-shell">
+    <header class="smart-header">
+      <div class="brand"><i class="fa-solid fa-filter"></i> <span>Smart Filters</span></div>
+      <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Dashboard</a>
+    </header>
+
+    <main class="smart-main">
+      <section class="filter-section">
+        <h2>Find Suppliers Easily</h2>
+        <form id="filterForm" class="filters">
+          <div class="form-group">
+            <label for="location">📍 Location</label>
+            <select id="location">
+              <option value="">Any</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Chandigarh">Chandigarh</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Kolkata">Kolkata</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="price">💰 Price Range</label>
+            <input type="range" id="price" min="100" max="10000" step="100"/>
+            <span id="priceValue">₹100 - ₹10000</span>
+          </div>
+
+          <div class="form-group">
+            <label for="availability">📦 Availability</label>
+            <select id="availability">
+              <option value="">Any</option>
+              <option value="in-stock">In Stock</option>
+              <option value="low-stock">Low Stock</option>
+              <option value="out-of-stock">Out of Stock</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="rating">⭐ Minimum Rating</label>
+            <select id="rating">
+              <option value="0">Any</option>
+              <option value="1">1 Star</option>
+              <option value="2">2 Stars</option>
+              <option value="3">3 Stars</option>
+              <option value="4">4 Stars</option>
+              <option value="5">5 Stars</option>
+            </select>
+          </div>
+
+          <button type="submit" class="apply-btn"><i class="fa-solid fa-check"></i> Apply Filters</button>
+        </form>
+      </section>
+
+      <section id="results" class="results">
+        <h3>Matching Suppliers</h3>
+        <ul id="supplierList">
+          <!-- JS will dynamically inject supplier cards -->
+        </ul>
+      </section>
+
+      <section id="suggestions" class="suggestion-panel">
+        <h3>Suggested Filters</h3>
+        <ul id="suggestionList">
+          <!-- JS will inject AI-style suggestions -->
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="smart.js"></script>
+</body>
+</html>

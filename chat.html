@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat • Vyaapar</title>
+  <link rel="stylesheet" href="chat.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="chat-container">
+    <!-- Sidebar / Contacts -->
+    <aside class="chat-sidebar">
+      <div class="sidebar-header">
+        <h2>Connections</h2>
+        <button id="newChatBtn" title="Start New Chat"><i class="fa-solid fa-plus"></i></button>
+      </div>
+      <ul class="contact-list">
+  <li class="contact active" data-name="AI Assistant">
+    <div class="avatar"><i class="fa-solid fa-robot"></i></div>
+    <span class="contact-name">AI Assistant</span>
+  </li>
+  <li class="contact" data-name="Electronics">
+    <div class="avatar">E</div>
+    <span class="contact-name">Electronics</span>
+  </li>
+  <li class="contact" data-name="Textile">
+    <div class="avatar">T</div>
+    <span class="contact-name">Textile</span>
+  </li>
+  <li class="contact" data-name="Medicine">
+    <div class="avatar">M</div>
+    <span class="contact-name">Medicine</span>
+  </li>
+  <li class="contact" data-name="Fertilizers">
+    <div class="avatar">F</div>
+    <span class="contact-name">Fertilizers</span>
+  </li>
+  <li class="contact" data-name="Logistics">
+    <div class="avatar">L</div>
+    <span class="contact-name">Logistics</span>
+  </li>
+  <li class="contact" data-name="Wholesale">
+    <div class="avatar">W</div>
+    <span class="contact-name">Wholesale</span>
+  </li>
+  <li class="contact" data-name="Retail Chains">
+    <div class="avatar">R</div>
+    <span class="contact-name">Retail Chains</span>
+  </li>
+  <li class="contact" data-name="Agro Products">
+    <div class="avatar">A</div>
+    <span class="contact-name">Agro Products</span>
+  </li>
+</ul>
+
+    </aside>
+
+    <!-- Main Chat Window -->
+    <main class="chat-main">
+      <header class="chat-header">
+        <div class="header-info">
+          <div class="avatar"><i class="fa-solid fa-robot"></i></div>
+          <div class="chat-title">
+            <h3>AI Assistant</h3>
+            <span class="status">Online</span>
+          </div>
+        </div>
+        <div class="header-actions">
+          <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <a href="index.html" class="back-home"><i class="fa-solid fa-arrow-left"></i> Home</a>
+        </div>
+      </header>
+
+      <div class="chat-window" id="chatWindow">
+        <!-- Messages -->
+        <div class="msg bot">
+          <div class="bubble">
+            👋 Hello! I’m your AI assistant for tijaarat. Ask anything about suppliers, orders, inventory, or recommendations.
+          </div>
+          <div class="msg-meta">
+            <span class="time">09:00 AM</span>
+            <span class="confidence">Confidence: 95%</span>
+          </div>
+        </div>
+      </div>
+
+      <form id="chatForm" class="chat-input">
+        <button type="button" id="emojiBtn" title="Emoji"><i class="fa-solid fa-face-smile"></i></button>
+        <input id="chatInput" type="text" placeholder="Type a message..." autocomplete="off" />
+        <button type="submit" id="sendBtn" title="Send"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </main>
+
+    <!-- Suggestion Panel -->
+    <aside class="chat-suggestions">
+      <h4>AI Suggestions</h4>
+      <ul class="suggestion-list" id="suggestionList">
+        <li class="suggestion">
+          <div class="suggestion-icon"><i class="fa-solid fa-box"></i></div>
+          <div class="suggestion-content">
+            <strong>Check latest supplier ratings</strong>
+            <p>Electronics Supplier has 4.9⭐ this week.</p>
+          </div>
+        </li>
+        <li class="suggestion">
+          <div class="suggestion-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="suggestion-content">
+            <strong>Trending Products</strong>
+            <p>Demand for textile exports increased by 18%.</p>
+          </div>
+        </li>
+        <!-- More suggestions dynamically added -->
+      </ul>
+    </aside>
+  </div>
+
+  <template id="msg-template">
+    <div class="msg">
+      <div class="bubble"></div>
+      <div class="msg-meta">
+        <span class="time"></span>
+        <span class="confidence"></span>
+      </div>
+    </div>
+  </template>
+  <script src="chat.js"></script>
+
+</body>
+</html>
+
+

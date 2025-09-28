@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recommendations - AI Driven</title>
+        <link rel="stylesheet" href="recommendations.css">
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header>
+            <div class="logo">💡 Recommendations</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#filters">Filters</a></li>
+                    <li><a href="#recommendations">Recommendations</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Discover AI-Driven Recommendations</h1>
+                <p>Personalized product and supplier suggestions based on reviews, preferences, and market trends.</p>
+            </div>
+            <div class="hero-image"></div>
+        </section>
+
+        <!-- Filters Section -->
+        <section class="filters" id="filters">
+            <h2>Filter Your Recommendations</h2>
+            <div class="filter-controls">
+                <div class="filter-item">
+                    <label for="category">Category</label>
+                    <select id="category">
+                        <option value="all">All</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="home">Home</option>
+                        <option value="sports">Sports</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <label for="rating">Minimum Rating</label>
+                    <input type="range" id="rating" min="1" max="5" step="0.5">
+                </div>
+                <div class="filter-item">
+                    <label for="trend">Trending</label>
+                    <select id="trend">
+                        <option value="all">All</option>
+                        <option value="hot">Hot</option>
+                        <option value="new">New</option>
+                        <option value="rising">Rising</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <label for="region">Supplier Region</label>
+                    <select id="region">
+                        <option value="all">All</option>
+                        <option value="north-america">North America</option>
+                        <option value="europe">Europe</option>
+                        <option value="asia">Asia</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <button id="apply-filters">Apply Filters</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section class="recommendations" id="recommendations">
+            <h2>AI-Powered Recommendations</h2>
+            <div class="tabs">
+                <button class="tab-button active" data-tab="products">Top Products</button>
+                <button class="tab-button" data-tab="suppliers">Top Suppliers</button>
+                <button class="tab-button" data-tab="trending">Trending Now</button>
+            </div>
+            <div class="tab-content" id="products"></div>
+            <div class="tab-content" id="suppliers" style="display:none;"></div>
+            <div class="tab-content" id="trending" style="display:none;"></div>
+        </section>
+
+        <!-- Footer -->
+
+
+        <!-- Footer -->
+        <footer id="contact">
+            <p>© 2025 Hackathon Finalists | Designed by Praveen Singh</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="#filters">Filters</a>
+                <a href="#recommendations">Recommendations</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </footer>
+
+
+        <script src="recommendations.js"></script>
+    </body>
+
+</html>
